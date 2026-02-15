@@ -11,7 +11,7 @@ const Home = () => {
 
   const phrases = [
     'Computer Engineering Student',
-    'Web Developer',
+    'Developer',
     'Freelancer',
   ];
 
