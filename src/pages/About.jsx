@@ -28,6 +28,24 @@ const About = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="flex justify-center"
+          >
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-3xl blur-2xl opacity-30"></div>
+              <img 
+                src="/images/myphoto.jpg" 
+                alt="Sujan Bhattarai" 
+                className="relative rounded-3xl shadow-2xl border-4 border-white dark:border-gray-800 w-full max-w-md object-cover"
+              />
+            </div>
+          </motion.div>
+
+
+
+          <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -47,21 +65,7 @@ const About = () => {
             </p>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex justify-center"
-          >
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-3xl blur-2xl opacity-30"></div>
-              <img 
-                src="/images/myphoto.jpg" 
-                alt="Sujan Bhattarai" 
-                className="relative rounded-3xl shadow-2xl border-4 border-white dark:border-gray-800 w-full max-w-md object-cover"
-              />
-            </div>
-          </motion.div>
+          
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 mb-12">
