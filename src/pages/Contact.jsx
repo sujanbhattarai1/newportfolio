@@ -31,13 +31,13 @@ const Contact = () => {
       const data = await response.json();
 
       if (response.ok) {
-        setStatus({ type: 'success', message: 'Message sent successfully! I will get back to you soon.' });
+        setStatus({ type: 'success', message: 'Message sent successfully!' });
         setFormData({ name: '', email: '', message: '' });
       } else {
         setStatus({ type: 'error', message: data.message || 'Failed to send message. Please try again.' });
       }
     } catch (error) {
-      setStatus({ type: 'error', message: 'Failed to send message. Please make sure the server is running.' });
+      setStatus({ type: 'error', message: 'Failed to send message. Server is not running.' });
     } finally {
       setIsSubmitting(false);
     }
