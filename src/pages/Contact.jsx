@@ -21,13 +21,12 @@ const Contact = () => {
     setStatus({ type: '', message: '' });
 
     try {
-      const response = await fetch('http://localhost:5000/api/server', {
+      const response = await fetch('/api/server', {  // remove http://localhost:5000
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
+
 
       const data = await response.json();
 
